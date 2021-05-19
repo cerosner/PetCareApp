@@ -1,14 +1,17 @@
-var React = require('react-native')
+import React from 'react'
+import { View, Text, Alert } from 'react-native'
 
 class HelloThere extends React.Component {
   clickMe() {
-    alert('Hi!')
+    Alert.alert('Hi!')
   }
   render() {
     return (
-      <div className="box" onClick={this.clickMe.bind(this)}>
-        Hello {this.props.name}. Please click me.
-      </div>
+      <View className="box" onClick={this.clickMe.bind(this)}>
+        <Text>
+          Hello {this.props.name}. Please click me.
+        </Text>
+      </View>
     )
   }
 }
